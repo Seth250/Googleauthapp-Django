@@ -18,6 +18,7 @@ This is a repository that shows a simple way to setup google authentication in D
 * Change the path to that directory ```[cd yourdirectoryname]```
 * Create a new Django Project if there is not an existing one ```[django-admin startproject myprojectname]```
 * Change the path to the project directory ```[cd myprojectname]```
+* Clone/Download the repository and place in the project directory OR use it as a guide to create your app
 * Make migration ```[python manage.py migrate]``` 
 * Run the Server ```[python manage.py runserver]```
 * Open your Browser and run http://localhost:8000 or http://127.0.0.1:8000 
