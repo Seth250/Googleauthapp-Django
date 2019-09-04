@@ -20,7 +20,7 @@ This is a repository that shows a simple way to setup google authentication in D
 * Change the path to the project directory ```[cd myprojectname]```
 * Make migration ```[python manage.py migrate]``` 
 * Run the Server ```[python manage.py runserver]```
-* Open your Browser and run http://localhost:8000 or http://127.0.0.1:8080 
+* Open your Browser and run http://localhost:8000 or http://127.0.0.1:8000 
 
 # NOTE:
 * Please Make Sure that ```SOCIAL_AUTH_GOOGLE_OAUTH2_KEY``` and ```SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET``` in ```[settings.py]``` are both filled with the right keys, they are left blank by default for Security reasons
