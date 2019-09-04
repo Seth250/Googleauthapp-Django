@@ -1,0 +1,59 @@
+{% extends "layout.html"%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8">
+	<title> Homepage </title>
+</head>
+
+<body> 
+	{% block content %}
+		{% if user.is_authenticated %}
+			<div class = "div1">
+				<button type = "submit" onclick = "logout()" class = "btn btn-primary">
+					Email Logout			
+				</button>
+			</div>
+
+			<div>
+				<p class = "display-4"> Welcome, {{ user.first_name }} {{ user.last_name }}! </p>
+				<p> Logged in as {{ user.email }} </p>
+				<a class = "btn btn-primary" href = "{% url 'logout' %}"> Site Logout </a>
+			</div>
+			<hr>
+
+			<h2 class = "info"> PERSONAL INFORMATION </h2>
+			<nav class = "navbar navbar-expand-sm navbar-dark bg-dark"> 
+				<div class = "container">  
+					<p class = "navbar-brand">
+						Username: {{ user.username }} <br><br>
+						Fullname: {{ user.first_name}} {{ user.last_name}} <br><br>
+						Email: {{ user.email }} <br><br>
+						User Status: 
+						{%if user.is_superuser %} 
+							SuperUser
+
+						{% else %}
+							Normal User
+
+						{% endif %} <br><br>
+						Date Joined: {{ user.date_joined }} <br><br>
+						Last Login: {{ user.last_login }} 
+					</p>
+				</div>
+			</nav>
+
+		{% else %}
+			<br>
+			<h4> You are Logged Out </h4>
+			<a class = "btn btn-primary" href = "{% url 'login' %}"> Go to Login Page </a>
+
+		{% endif %}
+
+		<script type="text/javascript" src = "{% static 'js/logoutredirect.js' %}"> </script>
+	{% endblock content %}
+
+</body>
+</html>

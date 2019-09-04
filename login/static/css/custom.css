@@ -1,0 +1,12 @@
+.info {
+	font-family: arial;
+	font-weight: bold;
+	color: slategrey;
+	text-align: center;
+}
+
+.div1 {
+	position: relative;
+	top: 161px;
+	left: 150px;
+}
