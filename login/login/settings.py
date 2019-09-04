@@ -44,10 +44,10 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware', 
-    #'django.middleware.security.SecurityMiddleware',
-    #'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
-    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
@@ -153,5 +153,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Make sure you fill these with the correct keys
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '528852549198-0i8uqufh96pmtudg95d5ruo7ptkn8628.apps.googleusercontent.com' 
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'IW9T7PtsM2n-ncvdnu5tyOlt'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '' #Enter Client ID here 
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' #Enter Client Secret here
